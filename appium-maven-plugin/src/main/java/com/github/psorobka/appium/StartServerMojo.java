@@ -62,7 +62,7 @@ public class StartServerMojo extends AbstractMojo {
                 nodeBin = nodeBinFile.getAbsolutePath();
             }
             getLog().debug("Node bin: " + nodeBin);
-            File appiumJsFile = new File(appiumHome.getAbsoluteFile(), "bin" + File.separator + "appium.js");
+            File appiumJsFile = new File(appiumHome.getAbsoluteFile() + File.separator + "appium.js");
             getLog().debug("Appium js: " + appiumJsFile);
             if (!appiumJsFile.exists()) {
                 throw new MojoExecutionException("Appium js does not exist: " + appiumJsFile);
